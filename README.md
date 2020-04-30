@@ -15,8 +15,17 @@ On 29-Apr-2020 this project is being built for initial use on:
     - Host for https://vaf-kiosk.grinnell.edu - The VAF kiosk site
     - Host for https://rootstalk-static.grinnell.edu - The FUTURE Rootstalk e-zine site
 
-The aforementioned guide, [Traefik 2.0 + Docker -- a Simple Step by Step Guide](https://medium.com/@containeroo/traefik-2-0-docker-a-simple-step-by-step-guide-e0be0c17cfa5), builds an environment destined to live in `/opt/containers`, and this project does the same.
+The aforementioned guide, [Traefik 2.0 + Docker -- a Simple Step by Step Guide](https://medium.com/@containeroo/traefik-2-0-docker-a-simple-step-by-step-guide-e0be0c17cfa5), builds an environment destined to live in `/opt/containers`, and this project does the same. The project and _Traefik_ were initiated on `static.grinnell.edu` like so:
 
+```
+sudo su
+git clone https://github.com/McFateM/docker-traefik2-host containers
+touch /opt/containers/traefik/data/acme.json
+chmod 600 /opt/containers/traefik/data/acme.json
+docker network create proxy
+cd /opt/containers/traefik
+docker-compose up -d
+```
 
 ## To Initialize the Host
 
