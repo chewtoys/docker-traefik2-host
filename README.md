@@ -50,17 +50,17 @@ Note that successful configuration of the `https://static.grinnell.edu/portainer
 @TODO: Modify the following for Traefik v2
 
 ```
-# static.grinnell.edu - The server landing page
+# static.grinnell.edu - The server landing page: rewritten for Traefik v2
 NAME=static-landing-page
 HOST=static.grinnell.edu
 IMAGE="mcfatem/static-landing"
 docker container run -d --name ${NAME} \
-    --label traefik.backend=${NAME} \
-    --label traefik.docker.network=web \
-    --label "traefik.frontend.rule=Host:${HOST}" \
+    --label "traefik.enable=true" \
+    --label "traefik.http.routers.static-landing-page.rule=Host(`${HOST}`)" \
+    --label traefik.docker.network=proxy \
     --label traefik.port=80 \
     --label com.centurylinklabs.watchtower.enable=true \
-    --network web \
+    --network proxy \
     --restart always \
   ${IMAGE}
 
