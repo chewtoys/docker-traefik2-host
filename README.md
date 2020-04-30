@@ -1,19 +1,22 @@
 # docker-traefik2-host
 
-Generalized Docker server config as documented in [My dockerized-server Config](https://dlad.summittdweller.com/en/posts/042-my-dockerized-server-config/) but modified to use Traefik v2.2.
+Generalized Docker server modified to use Traefik v2.2 based on guidance in [Traefik 2.0 + Docker -- a Simple Step by Step Guide](https://medium.com/@containeroo/traefik-2-0-docker-a-simple-step-by-step-guide-e0be0c17cfa5). Original concept as documented in [My dockerized-server Config](https://dlad.summittdweller.com/en/posts/042-my-dockerized-server-config/).
 
 At last check, 27-Apr-2020, the previous version of this project was used on:
 
   - https://static.grinnell.edu  : Grinnell College hosted server
   - https://summittdweller.com   : Personal DigitalOcean VPS (`digital-ocean-containrrr` branch)
 
-At last check, on 29-Apr-2020, this project was soon to be used on:
+On 29-Apr-2020 this project is being built for initial use on:
 
   - https://static.grinnell.edu : Grinnell College Libraries server for misc. "static" applications
     - Host for https://static.grinnell.edu - The server landing page
     - Host for https://vaf.grinnell.edu - The Visualizing Abolition and Freedom (VAF) static site
     - Host for https://vaf-kiosk.grinnell.edu - The VAF kiosk site
-    - Host for https://rootstalk-static.grinnell.edu - The FUTURE Rootstalk ezine site
+    - Host for https://rootstalk-static.grinnell.edu - The FUTURE Rootstalk e-zine site
+
+The aforementioned guide, [Traefik 2.0 + Docker -- a Simple Step by Step Guide](https://medium.com/@containeroo/traefik-2-0-docker-a-simple-step-by-step-guide-e0be0c17cfa5), builds an environment destined to live in `/opt/containers`, and this project does the same.
+
 
 ## To Initialize the Host
 
