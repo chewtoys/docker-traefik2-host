@@ -17,8 +17,8 @@ On 30-Apr-2020 this project is being built for initial use on:
 
 As of 30-Apr-2020 the dashboards for GC's `static.grinnell.edu` server are:
 
-  - http://static.grinnell.edu/traefik
-  - https://static.grinnell.edu/portainer
+  - http://static.grinnell.edu/dashboard/
+  - https://static.grinnell.edu/portainer/
 
 
 The aforementioned guide, [Traefik 2.0 + Docker -- a Simple Step by Step Guide](https://medium.com/@containeroo/traefik-2-0-docker-a-simple-step-by-step-guide-e0be0c17cfa5), builds an environment destined to live in `/opt/containers`, and this project does the same.
