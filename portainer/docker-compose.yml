@@ -17,7 +17,7 @@ services:
         - "traefik.enable=true"
         - "traefik.http.routers.portainer.entrypoints=http"
         - "traefik.http.routers.portainer.rule=Host(`static.grinnell.edu`) && Path(`/portainer`)"
-        - "traefik.http.middlewares.portainer-auth.basicauth.users=admin:$$2y$$05$$pJEzHJBzfoYYS7/hGAedcOP8XdsqNXE7j.LHFBVjueASOqOvvjGOy"
+        - "traefik.http.middlewares.portainer-auth.basicauth.users=admin:$$2y$$05$$r50JURPu5HhX1wfMpQ5wROLpNHp83rtqrB83XGcQHVZt8U6ao9vv."
         - "traefik.http.middlewares.portainer-https-redirect.redirectscheme.scheme=https"
         - "traefik.http.routers.portainer.middlewares=portainer-https-redirect"
         - "traefik.http.routers.portainer-secure.entrypoints=https"
